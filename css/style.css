@@ -67,7 +67,7 @@ h4:before {
 
 /* 마우스 */
 body {
-  cursor: none;
+    cursor: none;
 }
 
 /* 커서가 바뀔 수 있는 요소들 전부 숨기기 */
@@ -77,61 +77,69 @@ button,
 a:hover,
 button:hover,
 .hover-target:hover {
-  cursor: none !important;
+    cursor: none !important;
 }
 
 a:focus,
 button:focus,
 a:active,
 button:active {
-  outline: none !important;
-  box-shadow: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* 안에 들어있는 자식 요소까지 같이 */
 a *,
 button *,
 .hover-target * {
-  cursor: none !important;
+    cursor: none !important;
 }
 
 .custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  pointer-events: none;
-  z-index: 9999;
-  background: url("../img/mouse_1.png") no-repeat center / contain;
-  image-rendering: pixelated;
-  transform: translate(-2px, -2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 9999;
+    background: url("../img/mouse_1.png") no-repeat center / contain;
+    image-rendering: pixelated;
+    transform: translate(-2px, -2px);
 }
 
 .custom-cursor.is-hover {
-  background-image: url("../img/mouse_2.png");
+    background-image: url("../img/mouse_2.png");
 }
 
-@media (hover: none), (pointer: coarse) {
-  body {
-    cursor: auto;
-  }
+@media (hover: none),
+(pointer: coarse) {
+    body {
+        cursor: auto;
+    }
 
-  a,
-  button,
-  .hover-target,
-  a *,
-  button *,
-  .hover-target * {
-    cursor: auto !important;
-  }
+    a,
+    button,
+    .hover-target,
+    a *,
+    button *,
+    .hover-target * {
+        cursor: auto !important;
+    }
 
-  .custom-cursor {
-    display: none;
-  }
+    .custom-cursor {
+        display: none;
+    }
 }
-html, body, a, button, img, span, div {
-  cursor: none !important;
+
+html,
+body,
+a,
+button,
+img,
+span,
+div {
+    cursor: none !important;
 }
 
 
@@ -310,7 +318,8 @@ header {
     height: 65px;
 }
 
-nav {flex-wrap: wrap;
+nav {
+    flex-wrap: wrap;
     font-family: 'Press Start 2P', cursive;
     font-size: 25px;
 }
@@ -424,10 +433,13 @@ a.active {
 .about-img-div img {
     margin: 0 auto;
 }
-#about span{font-size: 20px;
-font-weight: bold;
-color: #526b12;
+
+#about span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #526b12;
 }
+
 /* projects section
 ==================================================*/
 
@@ -435,6 +447,7 @@ color: #526b12;
     padding: 100px 0;
     background: #FEF2C5;
 }
+
 /* projects section */
 #projects {
     padding: 100px 0;
@@ -795,39 +808,33 @@ color: #526b12;
 
 #contact {
     padding: 100px 0;
-    background:url(../img/footer_bg.png) bottom repeat-x
-    /* #FEF2C5; */
-}
-
-.contact_in {
     text-align: center;
+    color: #fff;
+    position: relative;
+    background: url(../img/footer_bg.png) bottom repeat-x
 }
 
-.contact_in i {
-    font-size: 35px;
+#contact .mail {
+    display: inline-block;
+    border: dashed 1px #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin-top: 12px;
 }
+.copyright{font-size: 9px;
+color: #bcbcbc;}
 
-.social {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.footer_box {    font-family: 'Press Start 2P', cursive;
+    background-color: #644f34;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
 }
-
-.social li a {
-    color: #333;
-    font-size: 35px;
-    margin-right: 15px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-}
-
-.social li a:hover {
-    color: #425BB5;
-}
-
+.mail span{font-size: 17px;}
 
 /* Responsive media queries
 ==================================================*/
@@ -898,4 +905,3 @@ color: #526b12;
         padding: 20px;
     }
 }
-
